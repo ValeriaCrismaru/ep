@@ -3,58 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orar USARB </title>
+    <title>Orar USARB</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="background">
-        <div class="container">
-            <header>
-                <h1>Universitatea de Stat „Alecu Russo” din Bălți</h1>
-            </header>
-            <main class="grid-layout">
-                <aside class="sidebar">
-                    <h2>Orarul Cursurilor</h2>
-                    <div class="tab-buttons">
-                        <button class="active">Grupe</button>
-                        <button class="active">Profesori</button>
-                        <button class="active">Aule</button>
-                    </div>
-                    <label for="grup">Regim pentru student</label>
-                    <div class="search-bar">
-                        <input type="text" id="grup" placeholder=" ">
-                    </div>
-                    <div class="search-bar">
-                        <input type="text" id="grup" placeholder=" ">
-                    </div>
-                    <select id="ziua">
-                        <option>Luni</option>
-                        <option>Marți</option>
-                        <option>Miercuri</option>
-                        <option>Joi</option>
-                        <option>Vineri</option>
-                        <option>Sâmbătă</option>
-                        <option>Duminică</option>
-                    </select>
-                    <input type="text" value=" " readonly>
-                    <div class=>
-                    </div>
-                    <div class="buttons">
-                    </div>
-                </aside>
-                <section class="main-content">
-                    <div class="schedule-grid">
-                    </div>
-                </section>
-                <div class="tab-buttons">
-                    <button class="active">Descarcă orar</button>
-                    <button class="active">Examene</button>
-                    <button class="active">Planificare</button>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Orarul Cursurilor</h2>
+            <div class="button-group">
+                <button id="grupe" class="toggle-button">Grupe</button>
+                <button id="profesori" class="toggle-button">Profesori</button>
+                <button id="aule" class="toggle-button">Aule</button>
+            </div>
+            <div class="student-mode">
+                <label for="student-mode-toggle">Regim pentru student</label>
+                <input type="checkbox" id="student-mode-toggle">
+            </div>
+            <div class="search-section">
+                <input type="text" class="search-bar" placeholder="Caută grupa">
+                <button class="clear-btn">X</button>
+            </div>
+            <div class="dropdown-section">
+                <label for="weekSelector">Săptămâna:</label>
+                <select id="weekSelector">
+                    <option>Săptămâna 13 (25.11.2024 - 1.12.2024)</option>
+                </select>
+                <label for="daySelector">Ziua:</label>
+                <select id="daySelector">
+                    <option>Luni</option>
+                    <option>Marți</option>
+                    <option selected="selected">Miercuri</option>
+                    <option>Joi</option>
+                    <option>Vineri</option>
+                    <option>Sâmbătă</option>
+                    <option>Duminică</option>
+                </select>
+            </div>
+            <div class="schedule-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>L - 25</td>
+                            <td class="slot" data-type="P"></td>
+                            <td class="slot" data-type="S"></td>
+                            <td class="slot" data-type="L"></td>
+                            <td class="slot" data-type="EP"></td>
+                            <td class="slot" data-type="P"></td>
+                            <td class="slot" data-type="S"></td>
+                            <td class="slot" data-type="L"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="legend">
+                    <p>P - Prelegere</p>
+                    <p>S - Seminar</p>
+                    <p>L - Laborator</p>
+                    <p>EP - Evaluare periodică</p>
                 </div>
-            </main>
-            <footer>
-                <p>Serviciul este inactiv între ore 23:00 și 3:00</p>
-            </footer>
+            </div>
+            <div class="button-group">
+                <button class="exam-button">Examene</button>
+                <button class="plan-button">Planificare</button>
+            </div>
+        </div>
+        <div class="schedule">
+            <img src="logo.png" alt="Logo Universitatea de Stat Alecu Russo din Bălți" class="logo">
+            <h2 class="university-title">UNIVERSITATEA DE STAT „ALECU RUSSO” DIN BĂLȚI</h2>
+            <table class="orar">
+                <tr>
+                    <td class="hour">8:00 - 9:30</td>
+                    <td class="course-info">
+                        <strong>Teoria numerelor</strong>
+                        <p>Prelegere</p>
+                        <p>conf. univ., dr. Zastînceanu L.</p>
+                        <p>aud. 236</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hour">9:45 - 11:15</td>
+                    <td class="course-info">
+                        <strong>Teoria numerelor</strong>
+                        <p>Prelegere</p>
+                        <p>conf. univ., dr. Zastînceanu L.</p>
+                        <p>aud. 236</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="hour">11:30 - 13:00</td>
+                    <td class="course-info">
+                        <strong>Teoria numerelor</strong>
+                        <p>Seminar</p>
+                        <p>asist. univ. Rotari T. </p>
+                        <p>aud. 234</p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
